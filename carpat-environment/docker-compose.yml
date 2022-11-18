@@ -36,6 +36,7 @@ services:
     ports:
       - "9000:9000"
       - "882:22"
+      - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
     working_dir: /var/www
     volumes:
       - "../carpat-app:/var/www"
@@ -66,6 +67,7 @@ services:
       - "8125:1025"
     networks:
       - carpat-network
+    restart: unless-stopped
 
 networks:
   carpat-network:
