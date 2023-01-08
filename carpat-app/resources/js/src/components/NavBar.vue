@@ -4,6 +4,7 @@
             <div class="navbar-nav mr-auto">
                 <router-link to="/" class="nav-item nav-link" style="margin-right: 10px; margin-left:10px">Profile</router-link>
                 <router-link to="/tasks" class="nav-item nav-link" style="margin-right: 10px;">Tasks</router-link>
+                <router-link to="/reviews" class="nav-item nav-link" style="margin-right: 10px;">Reviews</router-link>
             </div>
         </nav>
     </div>

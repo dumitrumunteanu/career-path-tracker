@@ -7,6 +7,7 @@ import Login from "@/components/Login.vue";
 import Register from "@/components/Register.vue";
 import Profile from "@/components/Profile.vue";
 import Tasks from "@/components/Tasks.vue";
+import Reviews from "@/components/Reviews.vue";
 
 const routes = [
     {
@@ -75,6 +76,23 @@ const routes = [
                 component: Tasks,
                 meta: {
                     title: `Tasks Info`
+                }
+            }
+        ]
+    },
+    {
+        path: "/reviews",
+        component: () => import('@/views/Reviews.vue'),
+        meta: {
+            middleware: "auth"
+        },
+        children: [
+            {
+                name: "Reviews",
+                path: '/reviews',
+                component: Reviews,
+                meta: {
+                    title: `Reviews Info`
                 }
             }
         ]
