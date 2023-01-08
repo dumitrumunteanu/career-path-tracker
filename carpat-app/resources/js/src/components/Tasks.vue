@@ -4,14 +4,7 @@
         <NavBar />
         <div class="profile_content">
             <div class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-evenly" style="padding-top: 16px;">
-                <EmployeeProffInfo />
-                <EmployeePersonalInfo />
-                <EmployeeReview />
-            </div>
-            <div class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-evenly" style="padding-top: 16px;">
-                <UpcomingTask />
-                <CareerStep />
-                <ProfileMilestone />
+                <ActiveTask />
             </div>
         </div>
         <Footer />
@@ -22,13 +15,8 @@
 import {mapActions} from "vuex";
 import Header from "./Header.vue";
 import NavBar from "./NavBar.vue";
-import EmployeeProffInfo from "./EmployeeProffInfo.vue";
-import EmployeePersonalInfo from "./EmployeePersonalInfo.vue";
-import EmployeeReview from "./EmployeeReview.vue";
 import Footer from "./Footer.vue";
-import UpcomingTask from "./UpcomingTask.vue";
-import CareerStep from "./CareerStep.vue";
-import ProfileMilestone from "./ProfileMilestone.vue";
+import ActiveTask from "./ActiveTask.vue";
 
 export default {
     name: "Profile",
@@ -45,13 +33,8 @@ export default {
     components: {
         Header,
         NavBar,
-        EmployeeProffInfo,
-        EmployeePersonalInfo,
-        EmployeeReview,
         Footer,
-        UpcomingTask,
-        CareerStep,
-        ProfileMilestone
+        ActiveTask,
     }
 }
 </script>

@@ -6,6 +6,7 @@ import ResetPassword from "@/components/ResetPassword.vue";
 import Login from "@/components/Login.vue";
 import Register from "@/components/Register.vue";
 import Profile from "@/components/Profile.vue";
+import Tasks from "@/components/Tasks.vue";
 
 const routes = [
     {
@@ -60,6 +61,23 @@ const routes = [
                 }
             }
         ]
+    },
+    {
+        path: "/tasks",
+        component: () => import('@/views/Tasks.vue'),
+        meta: {
+            middleware: "auth"
+        },
+        children: [
+            {
+                name: "Tasks",
+                path: '/tasks',
+                component: Tasks,
+                meta: {
+                    title: `Tasks Info`
+                }
+            }
+        ]
     }
 ]
 
@@ -68,7 +86,7 @@ const router = createRouter({
     routes,
 })
 
-router.beforeEach((to, from, next) => {
+/*router.beforeEach((to, from, next) => {
     document.title = to.meta.title;
 
     const isAuthenticated = store.getters["auth/authenticated"];
@@ -88,6 +106,6 @@ router.beforeEach((to, from, next) => {
     } else {
         next();
     }
-});
+});*/
 
 export default router
