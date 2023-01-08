@@ -8,6 +8,9 @@ import Register from "@/components/Register.vue";
 import Profile from "@/components/Profile.vue";
 import Tasks from "@/components/Tasks.vue";
 import Reviews from "@/components/Reviews.vue";
+import ManagerProfile from "@/components/ManagerProfile.vue";
+import ManagerTasks from "@/components/ManagerTasks.vue";
+import ManagerReviews from "@/components/ManagerReviews.vue";
 
 const routes = [
     {
@@ -96,7 +99,58 @@ const routes = [
                 }
             }
         ]
-    }
+    },
+    {
+        path: "/manager",
+        component: () => import('@/views/ManagerProfile.vue'),
+        meta: {
+            middleware: "auth"
+        },
+        children: [
+            {
+                name: "ManagerProfile",
+                path: '/manager',
+                component: ManagerProfile,
+                meta: {
+                    title: `Manager Info`
+                }
+            }
+        ]
+    },
+    {
+        path: "/managerTasks",
+        component: () => import('@/views/ManagerTasks.vue'),
+        meta: {
+            middleware: "auth"
+        },
+        children: [
+            {
+                name: "ManagerTasks",
+                path: '/managerTasks',
+                component: ManagerTasks,
+                meta: {
+                    title: `Manager Tasks Info`
+                }
+            }
+        ]
+    },
+    {
+        path: "/managerReviews",
+        component: () => import('@/views/ManagerReviews.vue'),
+        meta: {
+            middleware: "auth"
+        },
+        children: [
+            {
+                name: "ManagerReviews",
+                path: '/managerReviews',
+                component: ManagerReviews,
+                meta: {
+                    title: `Manager Reviews Info`
+                }
+            }
+        ]
+    },
 ]
 
 const router = createRouter({
