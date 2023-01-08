@@ -1,5 +1,5 @@
 <template>
-    <div class="table-responsive" style="width: 47%;">
+    <div class="table-responsive">
         <table class="table">
             <thead>
             <tr style="border-width: 2px;">
@@ -27,5 +27,7 @@ export default {
 </script>
 
 <style scoped>
-
+.table-responsive {
+    width: 47%;
+}
 </style>

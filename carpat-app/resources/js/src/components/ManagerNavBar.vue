@@ -3,8 +3,8 @@
         <nav class="container navbar navbar-expand-lg navbar-light bg-light">
             <div class="navbar-nav mr-auto">
                 <router-link to="/manager" class="nav-item nav-link" style="margin-right: 10px; margin-left:10px">Profile</router-link>
-                <router-link to="/managerTasks" class="nav-item nav-link" style="margin-right: 10px;">Review Tasks</router-link>
-                <router-link to="/managerReviews" class="nav-item nav-link" style="margin-right: 10px;">Assign Tasks</router-link>
+                <router-link to="/managerTasks" class="nav-item nav-link" style="margin-right: 10px;">Assign Tasks</router-link>
+                <router-link to="/managerReviews" class="nav-item nav-link" style="margin-right: 10px;">Review Tasks</router-link>
             </div>
         </nav>
     </div>

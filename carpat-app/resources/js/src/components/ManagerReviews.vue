@@ -3,9 +3,8 @@
         <Header />
         <ManagerNavBar />
         <div class="profile_content">
-            <div class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-evenly" style="padding-top: 16px;">
-
-            </div>
+                <EmployeeSelect />
+                <ManagerCompletedTasks />
         </div>
         <Footer />
     </div>
@@ -16,6 +15,8 @@ import {mapActions} from "vuex";
 import Header from "./Header.vue";
 import ManagerNavBar from "./ManagerNavBar.vue";
 import Footer from "./Footer.vue";
+import EmployeeSelect from "./EmployeeSelect.vue";
+import ManagerCompletedTasks from "./ManagerCompletedTasks.vue";
 
 export default {
     name: "ManagerReviews",
@@ -33,10 +34,19 @@ export default {
         Header,
         ManagerNavBar,
         Footer,
+        EmployeeSelect,
+        ManagerCompletedTasks
     }
 }
 </script>
 
-<style>
+<style scoped>
+.profile_content {
+    background-color: white;
+    grid-template-columns: 15% 82%;
+    display: grid;
+    grid-gap: 20px;
+    padding-top: 20px;
+}
 
 </style>
