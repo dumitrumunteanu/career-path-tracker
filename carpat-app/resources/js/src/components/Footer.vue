@@ -3,7 +3,7 @@
     <div class="container p-4"></div>
         <div class="text-center p-3">
             © 2023 Copyright:
-            <a class="text-white">CarPAT</a>
+            <a class="text-white">CarPaT</a>
     </div>
 </footer>
 

@@ -4,7 +4,8 @@
         <NavBar />
         <div class="profile_content">
             <div class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-evenly" style="padding-top: 16px;">
-                <ActiveTask />
+                <ActiveTasks />
+                <CompletedTasks />
             </div>
         </div>
         <Footer />
@@ -16,7 +17,8 @@ import {mapActions} from "vuex";
 import Header from "./Header.vue";
 import NavBar from "./NavBar.vue";
 import Footer from "./Footer.vue";
-import ActiveTask from "./ActiveTask.vue";
+import ActiveTasks from "./ActiveTasks.vue";
+import CompletedTasks from "./CompletedTasks.vue";
 
 export default {
     name: "Profile",
@@ -34,7 +36,8 @@ export default {
         Header,
         NavBar,
         Footer,
-        ActiveTask,
+        ActiveTasks,
+        CompletedTasks,
     }
 }
 </script>
