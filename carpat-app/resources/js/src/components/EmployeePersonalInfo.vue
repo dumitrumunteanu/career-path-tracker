@@ -58,7 +58,7 @@ export default {
 
 <style scoped>
 .table-responsive {
-  width: 30%;
+    width: 30%;
 }
 
 thead {

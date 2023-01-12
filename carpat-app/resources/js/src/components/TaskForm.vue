@@ -9,7 +9,7 @@
                 </div>
                 <div class="form-group">
                     <label class="form-label" style="font-weight: bold;">Task Description</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="7"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" placeholder="Write task description."></textarea>
                 </div>
                 <div class="form-group">
                     <label class="form-label" style="font-weight: bold;">Due Date</label>

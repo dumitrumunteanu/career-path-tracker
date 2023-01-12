@@ -5,6 +5,7 @@
                 <router-link to="/manager" class="nav-item nav-link" style="margin-right: 10px; margin-left:10px">Profile</router-link>
                 <router-link to="/managerTasks" class="nav-item nav-link" style="margin-right: 10px;">Assign Tasks</router-link>
                 <router-link to="/managerReviews" class="nav-item nav-link" style="margin-right: 10px;">Review Tasks</router-link>
+                <router-link to="/managerMilestones" class="nav-item nav-link" style="margin-right: 10px;">Assign Milestones</router-link>
             </div>
         </nav>
     </div>

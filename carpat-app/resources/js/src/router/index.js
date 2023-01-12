@@ -11,6 +11,7 @@ import Reviews from "@/components/Reviews.vue";
 import ManagerProfile from "@/components/ManagerProfile.vue";
 import ManagerTasks from "@/components/ManagerTasks.vue";
 import ManagerReviews from "@/components/ManagerReviews.vue";
+import ManagerMilestones from "@/components/ManagerMilestones.vue";
 
 const routes = [
     {
@@ -147,6 +148,23 @@ const routes = [
                 component: ManagerReviews,
                 meta: {
                     title: `Manager Reviews Info`
+                }
+            }
+        ]
+    },
+    {
+        path: "/managerMilestones",
+        component: () => import('@/views/ManagerMilestones.vue'),
+        meta: {
+            middleware: "auth"
+        },
+        children: [
+            {
+                name: "ManagerMilestones",
+                path: '/managerMilestones',
+                component: ManagerMilestones,
+                meta: {
+                    title: `Manager Milestones Info`
                 }
             }
         ]

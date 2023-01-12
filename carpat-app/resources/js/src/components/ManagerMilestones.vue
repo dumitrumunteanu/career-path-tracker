@@ -3,8 +3,8 @@
         <ManagerHeader />
         <ManagerNavBar />
         <div class="profile_content">
-                <EmployeeSelect />
-                <ManagerCompletedTasks />
+            <EmployeeSelect />
+            <MilestonesForm />
         </div>
         <Footer />
     </div>
@@ -16,10 +16,10 @@ import ManagerHeader from "./ManagerHeader.vue";
 import ManagerNavBar from "./ManagerNavBar.vue";
 import Footer from "./Footer.vue";
 import EmployeeSelect from "./EmployeeSelect.vue";
-import ManagerCompletedTasks from "./ManagerCompletedTasks.vue";
+import MilestonesForm from "./MilestonesForm.vue";
 
 export default {
-    name: "ManagerReviews",
+    name: "ManagerMilestones",
     computed: {
         user() {
             return this.$store.getters["auth/user"];
@@ -35,12 +35,13 @@ export default {
         ManagerNavBar,
         Footer,
         EmployeeSelect,
-        ManagerCompletedTasks
+        MilestonesForm
     }
 }
 </script>
 
 <style scoped>
+
 .profile_content {
     background-color: white;
     grid-template-columns: 15% 82%;

@@ -1,10 +1,10 @@
 <template>
     <div class="container">
-        <Header />
+        <ManagerHeader />
         <ManagerNavBar />
         <div class="profile_content">
-            <div class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-evenly" style="padding-top: 16px;">
-                <EmployeeProffInfo />
+            <div class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex d-xxl-flex justify-content-start" style="padding-top: 16px;">
+                <EmployeeProffInfo style="margin-left: 32px; margin-right: 35px;"/>
                 <EmployeePersonalInfo />
             </div>
         </div>
@@ -14,7 +14,7 @@
 
 <script>
 import {mapActions} from "vuex";
-import Header from "./Header.vue";
+import ManagerHeader from "./ManagerHeader.vue";
 import ManagerNavBar from "./ManagerNavBar.vue";
 import EmployeeProffInfo from "./EmployeeProffInfo.vue";
 import EmployeePersonalInfo from "./EmployeePersonalInfo.vue";
@@ -33,7 +33,7 @@ export default {
         }),
     },
     components: {
-        Header,
+        ManagerHeader,
         ManagerNavBar,
         EmployeeProffInfo,
         EmployeePersonalInfo,

@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <Header />
+        <ManagerHeader />
         <ManagerNavBar />
         <div class="profile_content">
                 <EmployeeSelect />
@@ -12,7 +12,7 @@
 
 <script>
 import {mapActions} from "vuex";
-import Header from "./Header.vue";
+import ManagerHeader from "./ManagerHeader.vue";
 import ManagerNavBar from "./ManagerNavBar.vue";
 import Footer from "./Footer.vue";
 import EmployeeSelect from "./EmployeeSelect.vue";
@@ -31,7 +31,7 @@ export default {
         }),
     },
     components: {
-        Header,
+        ManagerHeader,
         ManagerNavBar,
         Footer,
         EmployeeSelect,

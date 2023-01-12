@@ -40,6 +40,8 @@ export default {
 
 .table-responsive {
     width: 30%;
+    margin-right: 33px;
+    margin-left: 32px;
 }
 
 thead {
