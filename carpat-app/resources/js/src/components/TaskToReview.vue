@@ -23,7 +23,7 @@
 
 <script>
 export default {
-    name: "TaskToReview"
+    name: "TaskToReview",
 }
 </script>
 

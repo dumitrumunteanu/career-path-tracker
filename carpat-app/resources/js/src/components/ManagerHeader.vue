@@ -18,12 +18,20 @@
 
             <div class="profile_button_group">
                 <div class="btn-group" role="group">
-                    <button class="btn btn-primary" type="button" style="margin-right: 26px;background: #00a9af;border-radius: 10px;border-style: none;">
-                        <i class="fas fa-cog" style="margin-left: 10px;margin-right: 10px;margin-top: 5px;margin-bottom: 5px;"></i>
+                    <button @click="$router.push('/register')" class="btn btn-primary" type="button" style="margin-right: 15px;background: #00a9af;border-radius: 10px;border-style: none;">
+                        <font-awesome-icon icon="fa-solid fa-user-plus" style="margin-right: 7px;"/>
+                        <span style="margin-right: 10px;">Add User</span>
+                    </button>
+                    <button class="btn btn-primary" type="button" style="background: #00a9af;border-radius: 10px;border-style: none;">
+                        <font-awesome-icon icon="fa-solid fa-trash" style="margin-right: 7px;"/>
+                        <span style="margin-right: 10px;">Remove User</span>
+                    </button>
+                    <button @click="$router.push('/settings')" class="btn btn-primary" type="button" style="margin-right: 15px;margin-left: 15px;background: #00a9af;border-radius: 10px;border-style: none;">
+                        <font-awesome-icon icon="fa-solid fa-gear" style="margin-right: 7px;"/>
                         <span style="margin-right: 10px;">Settings</span>
                     </button>
                     <button @click="logout" class="btn btn-primary" type="button" style="background: #00a9af;border-radius: 10px;border-style: none;">
-                        <i class="fas fa-sign-out-alt" style="margin-right: 10px;margin-left: 10px;margin-top: 5px;margin-bottom: 5px;"></i>
+                        <font-awesome-icon icon="fa-solid fa-right-from-bracket" style="margin-right: 7px;"/>
                         <span style="margin-right: 10px;">Log Out</span>
                     </button>
                 </div>

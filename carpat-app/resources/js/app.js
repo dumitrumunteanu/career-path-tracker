@@ -21,8 +21,12 @@ import { faCakeCandles} from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faHouse } from "@fortawesome/free-solid-svg-icons";
+import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { faGear } from "@fortawesome/free-solid-svg-icons";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faStar, faUsers, faCakeCandles, faUser, faEnvelope, faHouse)
+library.add(faStar, faUsers, faCakeCandles, faUser, faEnvelope, faHouse, faRightFromBracket, faGear, faTrash, faUserPlus)
 
 
 const app = createApp(App);

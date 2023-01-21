@@ -12,6 +12,7 @@ import ManagerProfile from "@/components/ManagerProfile.vue";
 import ManagerTasks from "@/components/ManagerTasks.vue";
 import ManagerReviews from "@/components/ManagerReviews.vue";
 import ManagerMilestones from "@/components/ManagerMilestones.vue";
+import Settings from "@/components/Settings.vue";
 
 const routes = [
     {
@@ -169,6 +170,24 @@ const routes = [
             }
         ]
     },
+    {
+        path: "/settings",
+        component: () => import('@/views/Settings.vue'),
+        meta: {
+            middleware: "auth"
+        },
+        children: [
+            {
+                name: "Settings",
+                path: '/settings',
+                component: Settings,
+                meta: {
+                    title: `Settings`
+                }
+            }
+        ]
+    },
+
 ]
 
 const router = createRouter({
