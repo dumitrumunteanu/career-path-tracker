@@ -81,8 +81,9 @@ hr {
 }
 
 .profile_picture {
-  width: 110px;
-  object-fit: cover;
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
 }
 
 .profile_fullname {

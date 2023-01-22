@@ -22,7 +22,7 @@
                         <font-awesome-icon icon="fa-solid fa-user-plus" style="margin-right: 7px;"/>
                         <span style="margin-right: 10px;">Add User</span>
                     </button>
-                    <button class="btn btn-primary" type="button" style="background: #00a9af;border-radius: 10px;border-style: none;">
+                    <button @click="$router.push('/removeUsr')" class="btn btn-primary" type="button" style="background: #00a9af;border-radius: 10px;border-style: none;">
                         <font-awesome-icon icon="fa-solid fa-trash" style="margin-right: 7px;"/>
                         <span style="margin-right: 10px;">Remove User</span>
                     </button>

@@ -30,5 +30,8 @@ export default {
 </script>
 
 <style>
+.form-control {
+    background-color: #F1F0F0;
+}
 
 </style>

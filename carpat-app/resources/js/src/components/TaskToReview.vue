@@ -13,7 +13,7 @@
                 </svg></div>
                 <div style="width: 100%;"><strong>Some random task name.</strong>
                     <p style="font-size: 16px;">hjdjsdha jkdhsajk dhkajs hdkjh jkas hd jksah djkas hjkas hdjkashd jaskdhjaks hdjask dhjsakd hasjkd hjsa dhjaskdh jaskdhajs dhjsa dhasjdhasjdh sjakadhajks dhjask dhjkashdjas</p>
-                    <button class="btn btn-primary" type="button" data-bs-target="#modal-1" data-bs-toggle="modal" style="height: 26px;font-size: 14px;padding-top: 0px;background: #00a9af;padding-bottom: 0px;border-width: 0px;">Write Review</button>
+                    <button @click="$router.push('/reviewUsr')" class="btn btn-primary" type="button" data-bs-target="#modal-1" data-bs-toggle="modal" style="height: 26px;font-size: 14px;padding-top: 0px;background: #00a9af;padding-bottom: 0px;border-width: 0px;">Write Review</button>
                 </div>
             </div>
         </td>
@@ -22,8 +22,12 @@
 </template>
 
 <script>
+
 export default {
     name: "TaskToReview",
+    components: {
+
+    }
 }
 </script>
 

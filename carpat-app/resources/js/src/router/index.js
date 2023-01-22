@@ -13,6 +13,8 @@ import ManagerTasks from "@/components/ManagerTasks.vue";
 import ManagerReviews from "@/components/ManagerReviews.vue";
 import ManagerMilestones from "@/components/ManagerMilestones.vue";
 import Settings from "@/components/Settings.vue";
+import ReviewForm from "@/components/ReviewForm.vue";
+import RemoveUser from "@/components/RemoveUser.vue";
 
 const routes = [
     {
@@ -183,6 +185,40 @@ const routes = [
                 component: Settings,
                 meta: {
                     title: `Settings`
+                }
+            }
+        ]
+    },
+    {
+        path: "/reviewUsr",
+        component: () => import('@/views/ReviewForm.vue'),
+        meta: {
+            middleware: "auth"
+        },
+        children: [
+            {
+                name: "ReviewForm",
+                path: '/reviewUsr',
+                component: ReviewForm,
+                meta: {
+                    title: `Review Form`
+                }
+            }
+        ]
+    },
+    {
+        path: "/removeUsr",
+        component: () => import('@/views/RemoveUser.vue'),
+        meta: {
+            middleware: "auth"
+        },
+        children: [
+            {
+                name: "RemoveUser",
+                path: '/removeUsr',
+                component: RemoveUser,
+                meta: {
+                    title: `Remove User`
                 }
             }
         ]
