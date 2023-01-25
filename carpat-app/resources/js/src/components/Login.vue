@@ -15,7 +15,7 @@
                 <input class="input-field__input" type="password" v-model="authData.password" name="password" id="password">
             </div>
             <div>
-                <button class="button" type="submit" :disabled="isLoading">
+                <button class="button" type="submit" :disabled="isLoading" style="background-color: #00a9af">
                     {{ isLoading ? "Please wait" : "Login" }}
                 </button>
             </div>
