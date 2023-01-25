@@ -36,6 +36,7 @@ services:
     ports:
       - "9000:9000"
       - "882:22"
+      - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
     working_dir: /var/www
     volumes:
       - "../carpat-app:/var/www"
@@ -51,8 +52,8 @@ services:
       - MAIL_DELAY=2500
       - DB_HOST=carpat-db
       - DB_DATABASE=carpat_db
-      - DB_USERNAME=root
-      - DB_PASSWORD=root
+      - DB_USERNAME=
+      - DB_PASSWORD=
       - DB_PORT=3306
     networks:
       - carpat-network
@@ -66,6 +67,7 @@ services:
       - "8125:1025"
     networks:
       - carpat-network
+    restart: unless-stopped
 
 networks:
   carpat-network:

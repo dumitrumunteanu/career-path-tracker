@@ -1,0 +1,11 @@
+@import "normalize-scss/sass/normalize/import-now";
+
+@import 'bootstrap/scss/bootstrap';
+
+@import "resources/js/src/assets/styles/common/index";
+
+@import "resources/js/src/assets/styles/views/index";
+
+body {
+    font-family: $font-family-sans-serif;
+}
