@@ -40,6 +40,9 @@ export default {
             logout: "auth/logout",
         }),
     },
+    mounted() {
+        this.$store.dispatch("auth/loadUser");
+    },
     components: {
         Header,
         NavBar,

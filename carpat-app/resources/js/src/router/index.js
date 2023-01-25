@@ -231,26 +231,26 @@ const router = createRouter({
     routes,
 })
 
-/*router.beforeEach((to, from, next) => {
-    document.title = to.meta.title;
-
-    const isAuthenticated = store.getters["auth/authenticated"];
-    const requiresAuthentication = (to.meta.middleware === "auth");
-    const loginQuery = { name: "Login", query: { redirect: to.fullPath } };
-
-    if (requiresAuthentication && !isAuthenticated) {
-        store.dispatch("auth/login").then(() => {
-            if (!store.getters["auth/authenticated"]) {
-                next(loginQuery);
-            } else {
-                next();
-            }
-        });
-    } else if (!requiresAuthentication && isAuthenticated) {
-        router.push({ name: "ProfileInfo" });
-    } else {
-        next();
-    }
-});*/
+// router.beforeEach((to, from, next) => {
+//     document.title = to.meta.title;
+//
+//     const isAuthenticated = store.getters["auth/authenticated"];
+//     const requiresAuthentication = (to.meta.middleware === "auth");
+//     const loginQuery = { name: "Login", query: { redirect: to.fullPath } };
+//
+//     if (requiresAuthentication && !isAuthenticated) {
+//         store.dispatch("auth/login").then(() => {
+//             if (!store.getters["auth/authenticated"]) {
+//                 next(loginQuery);
+//             } else {
+//                 next();
+//             }
+//         });
+//     } else if (!requiresAuthentication && isAuthenticated) {
+//         router.push({ name: "ProfileInfo" });
+//     } else {
+//         next();
+//     }
+// });
 
 export default router

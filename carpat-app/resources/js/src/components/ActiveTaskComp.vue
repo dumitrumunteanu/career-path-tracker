@@ -1,6 +1,6 @@
 <template>
     <tbody>
-    <tr style="border-width: 2px;">
+    <tr style="border-width: 2px;" v-for="task in tasks">
         <td>
             <div class="d-flex">
                 <div style="padding-right: 10px;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-file-text" style="font-size: 50px;">
@@ -11,8 +11,10 @@
                     <line x1="9" y1="13" x2="15" y2="13"></line>
                     <line x1="9" y1="17" x2="15" y2="17"></line>
                 </svg></div>
-                <div style="width: 100%;"><strong>Some random task name.</strong><input class="d-inline-flex float-end" type="checkbox" style="width: 15px;height: 15px;margin-top: 5px;">
-                    <p style="font-size: 16px;">hjdjsdha jkdhsajk dhkajs hdkjh jkas hd jksah djkas hjkas hdjkashd jaskdhjaks hdjask dhjsakd hasjkd hjsa dhjaskdh jaskdhajs dhjsa dhasjdhasjdh sjakadhajks dhjask dhjkashdjas</p><span style="font-weight: bold;">Due:&nbsp;<span style="font-weight: initial;">Nov. 13, 2022</span></span>
+                <div style="width: 100%;">
+                    <strong>{{ task.subject }}</strong>
+                    <input class="d-inline-flex float-end" type="checkbox" style="width: 15px;height: 15px;margin-top: 5px;">
+                    <p style="font-size: 16px;">{{ task.description }}</p><span style="font-weight: bold;">Due:&nbsp;<span style="font-weight: initial;">{{ new Date(task.dueDate).toDateString() }}</span></span>
                 </div>
             </div>
         </td>
@@ -22,7 +24,18 @@
 
 <script>
 export default {
-    name: "ActiveTaskComp"
+    name: "ActiveTaskComp",
+    computed: {
+        user() {
+           return this.$store.getters["auth/user"];
+        },
+        tasks() {
+            return this.$store.getters["tasks/list"];
+        },
+    },
+    mounted() {
+        this.$store.dispatch("tasks/loadTasks", this.user);
+    },
 }
 
 </script>

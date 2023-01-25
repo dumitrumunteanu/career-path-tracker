@@ -2,11 +2,6 @@
     <header>
 
         <div class="container d-inline-flex d-xl-flex justify-content-xl-start align-items-xl-center header_container">
-
-            <div class="image_container">
-                <img alt="Profile picture" class="rounded-circle border profile_picture" src="@/assets/images/venti.png" >
-            </div>
-
             <section class="d-inline-flex">
                 <div class="d-grid profile_details_left">
                     <p class="profile_fullname"> {{ user.email }} </p>
@@ -18,14 +13,6 @@
 
             <div class="profile_button_group">
                 <div class="btn-group" role="group">
-                    <button @click="$router.push('/register')" class="btn btn-primary" type="button" style="margin-right: 15px;background: #00a9af;border-radius: 10px;border-style: none;">
-                        <font-awesome-icon icon="fa-solid fa-user-plus" style="margin-right: 7px;"/>
-                        <span style="margin-right: 10px;">Add User</span>
-                    </button>
-                    <button @click="$router.push('/removeUsr')" class="btn btn-primary" type="button" style="background: #00a9af;border-radius: 10px;border-style: none;">
-                        <font-awesome-icon icon="fa-solid fa-trash" style="margin-right: 7px;"/>
-                        <span style="margin-right: 10px;">Remove User</span>
-                    </button>
                     <button @click="$router.push('/settings')" class="btn btn-primary" type="button" style="margin-right: 15px;margin-left: 15px;background: #00a9af;border-radius: 10px;border-style: none;">
                         <font-awesome-icon icon="fa-solid fa-gear" style="margin-right: 7px;"/>
                         <span style="margin-right: 10px;">Settings</span>
@@ -89,6 +76,7 @@ hr {
 
 .profile_details_left {
     padding-right: 20px;
+    padding-left: 10px;
 }
 
 .profile_details_middle {

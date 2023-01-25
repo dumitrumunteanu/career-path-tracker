@@ -19,8 +19,21 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->unsignedBigInteger('role_id')->default(1);
+            $table->unsignedBigInteger('department_id')->nullable();
+            $table->unsignedBigInteger('team_id')->nullable();
             $table->rememberToken();
             $table->timestamps();
+
+            $table->foreign('role_id', 'users_role_id_foreign')
+                ->references('id')
+                ->on('roles');
+            $table->foreign('department_id', 'users_department_id_foreign')
+                ->references('id')
+                ->on('departments');
+            $table->foreign('team_id', 'users_team_id_foreign')
+                ->references('id')
+                ->on('teams');
         });
     }
 

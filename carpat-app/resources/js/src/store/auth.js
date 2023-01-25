@@ -27,10 +27,9 @@ export default {
         async loadUser({ commit }) {
             try {
                 const response = await AuthService.getAuthUser();
-                commit("SET_USER", response.data);
+                commit("SET_USER", response.data.data);
                 commit("SET_AUTHENTICATED", true);
-
-                return response.data;
+                return response.data.data;
             } catch (error) {
                 commit("SET_USER", {});
                 commit("SET_AUTHENTICATED", false);

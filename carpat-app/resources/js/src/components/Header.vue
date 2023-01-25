@@ -3,15 +3,11 @@
 
       <div class="container d-inline-flex d-xl-flex justify-content-xl-start align-items-xl-center header_container">
 
-        <div class="image_container">
-          <img alt="Profile picture" class="rounded-circle border profile_picture" src="@/assets/images/venti.png" >
-        </div>
-
         <section class="d-inline-flex">
           <div class="d-grid profile_details_left">
             <p class="profile_fullname"> {{ user.email }} </p>
             <span class="employee_id">Employee ID:
-              <span class="employee_title"> employeeID </span>
+              <span class="employee_title"> {{ user.id }} </span>
             </span>
           </div>
 
@@ -19,7 +15,7 @@
 
           <div class="d-grid profile_details_middle">
             <span class="employee_id">Role:
-              <span class="employee_title"> role </span>
+              <span class="employee_title"> {{ user.role }} </span>
             </span>
             <span class="profile_rating_text"> <font-awesome-icon icon="fa-solid fa-star" class="fas fa-star profile_rating_star"/>
               <span> 4.6  Rating</span>
@@ -93,6 +89,7 @@ hr {
 
 .profile_details_left {
   padding-right: 20px;
+  padding-left: 10px;
 }
 
 .profile_details_middle {
